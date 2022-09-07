@@ -8,14 +8,23 @@ Forked from [iurimateus](https://github.com/iurimateus/luasnip-latex-snippets.nv
 
 ```lua
 use {
-  "iurimateus/luasnip-latex-snippets.nvim",
-  requires = { "L3MON4D3/LuaSnip", "preservim/vim-markdown", "lervag/vimtex" },
-  config = function()
-    vim.g.vim_markdown_math = true
-    require'luasnip-latex-snippets'.setup()
-    -- or setup({ use_treesitter = true })
-  end,
-  ft = { "tex", "markdown" },
+    "jczhang02/luasnips-mathtex-snippets",
+	config = function()
+		vim.cmd([[packadd LuaSnip]])
+		vim.cmd([[packadd vimtex]])
+		vim.cmd([[packadd vim-markdown]])
+		require("luasnip-latex-snippets").setup()
+		-- or setup({ use_treesitter = true })
+	end,
+	ft = { "tex", "markdown" },
+}
+use{
+    "preservim/vim-markdown",
+	opt = true,
+	ft = "markdown",
+	config = function()
+		vim.cmd([[let g:vim_markdown_math = 1]])
+	end,
 }
 ```
 
