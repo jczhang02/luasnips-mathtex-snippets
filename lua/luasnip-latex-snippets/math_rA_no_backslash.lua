@@ -7,7 +7,7 @@ local postfix_trig = function(match)
 end
 
 local postfix_node = f(function(_, snip)
-	return string.format("\\%s ", snip.captures[1])
+	return string.format("\\%s", snip.captures[1])
 end, {})
 
 local build_snippet = function(trig, node, match, priority, name)
