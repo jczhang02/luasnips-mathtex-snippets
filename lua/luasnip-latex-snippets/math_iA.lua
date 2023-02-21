@@ -30,6 +30,7 @@ local math_iA = {
 	),
 
 	ls.parser.parse_snippet({ trig = "td", name = "to the ... power ^{}" }, "^{$1}$0"),
+	ls.parser.parse_snippet({ trig = "tb", name = "to the ... lower" }, "_{$1}$0"),
 	ls.parser.parse_snippet({ trig = "rd", name = "to the ... power ^{()}" }, "^{($1)}$0"),
 	ls.parser.parse_snippet({ trig = "cb", name = "Cube ^3" }, "^3"),
 	ls.parser.parse_snippet({ trig = "sr", name = "Square ^2" }, "^2"),
