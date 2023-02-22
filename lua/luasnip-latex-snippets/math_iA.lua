@@ -61,6 +61,7 @@ local math_iA = {
 	ls.parser.parse_snippet({ trig = "<!", name = "normal" }, "\\triangleleft"),
 	ls.parser.parse_snippet({ trig = "floor", name = "floor" }, "\\left\\lfloor $1 \\right\\rfloor$0"),
 	ls.parser.parse_snippet({ trig = "mcal", name = "mathcal" }, "\\mathcal{$1}$0"),
+	ls.parser.parse_snippet({ trig = "mscr", name = "mathscr" }, "\\mathscr{$1}$0"),
 	ls.parser.parse_snippet({ trig = "//", name = "Fraction" }, "\\frac{$1}{$2}$0"),
 	ls.parser.parse_snippet({ trig = "\\\\\\", name = "setminus" }, "\\setminus"),
 	with_priority(ls.parser.parse_snippet({ trig = "->", name = "to" }, "\\to"), 100),
